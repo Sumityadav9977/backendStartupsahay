@@ -96,7 +96,9 @@ app.use('/exceldata',ExcelDataRouter);
 app.use('/emp',ProfileRouter);
 
 app.use('/getdata',DataRouter);
-
+app.use("/", (req, res)=>{
+  res.json({mesage:"HI"})
+})
 // 
 function convertAllExcelDate(excelDate) {
   const baseDate = new Date('1900-01-01');
